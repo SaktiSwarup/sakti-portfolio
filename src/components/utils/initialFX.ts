@@ -6,8 +6,12 @@ export function initialFX() {
   document.body.style.overflowY = "auto";
   smoother.paused(false);
   document.getElementsByTagName("main")[0].classList.add("main-active");
+  const bodyBg =
+    getComputedStyle(document.documentElement)
+      .getPropertyValue("--bodyBg")
+      .trim() || "#050810";
   gsap.to("body", {
-    backgroundColor: "#0a0e17",
+    backgroundColor: bodyBg,
     duration: 0.5,
     delay: 1,
   });

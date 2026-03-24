@@ -14,8 +14,14 @@ const Contact = () => {
                 saktiswarup97@gmail.com
               </a>
             </p>
+            <h4>Phone</h4>
+            <p>
+              <a href="tel:+919337296151" data-cursor="disable">
+                +91 93372 96151
+              </a>
+            </p>
             <h4>Education</h4>
-            <p>MCA (Masters in Computer Application)</p>
+            <p>MCA - BPUT, Odisha (CGPA: 8.7/10)</p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>

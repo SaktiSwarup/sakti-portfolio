@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
-:root {
+/* Default = Ocean (also when data-theme missing) */
+:root,
+html[data-theme="ocean"] {
   font-family: "Geist", sans-serif;
-
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.5;
   scroll-behavior: smooth;
-  color-scheme: light dark;
-  color: #eae5ec;
-  background-color: var(--backgroundColor);
+  color-scheme: dark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,10 +17,62 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+
   --accentColor: #5eead4;
   --backgroundColor: #0a0e17;
+  --bodyBg: #050810;
+  --textPrimary: #eae5ec;
+  --textBody: #f8fafc;
+  --textMuted: #94a3b8;
+  --surfaceBorder: rgba(148, 163, 184, 0.25);
+  --socialHoverColor: #050810;
+
+  color: var(--textPrimary);
+  background-color: var(--backgroundColor);
   --vh: 100vh;
   --vh: 100svh;
+}
+
+html[data-theme="ember"] {
+  color-scheme: dark;
+  --accentColor: #fb923c;
+  --backgroundColor: #1a0f0c;
+  --bodyBg: #120908;
+  --textPrimary: #fef3e7;
+  --textBody: #fff7ed;
+  --textMuted: #a8a29e;
+  --surfaceBorder: rgba(251, 146, 60, 0.22);
+  --socialHoverColor: #1c0a06;
+  color: var(--textPrimary);
+  background-color: var(--backgroundColor);
+}
+
+html[data-theme="violet"] {
+  color-scheme: dark;
+  --accentColor: #c4b5fd;
+  --backgroundColor: #0f0a18;
+  --bodyBg: #0a0612;
+  --textPrimary: #ede9fe;
+  --textBody: #f5f3ff;
+  --textMuted: #a5b4fc;
+  --surfaceBorder: rgba(196, 181, 253, 0.22);
+  --socialHoverColor: #0c0618;
+  color: var(--textPrimary);
+  background-color: var(--backgroundColor);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --accentColor: #0d9488;
+  --backgroundColor: #f1f5f9;
+  --bodyBg: #e2e8f0;
+  --textPrimary: #0f172a;
+  --textBody: #1e293b;
+  --textMuted: #64748b;
+  --surfaceBorder: rgba(15, 23, 42, 0.12);
+  --socialHoverColor: #0f172a;
+  color: var(--textPrimary);
+  background-color: var(--backgroundColor);
 }
 
 h1,
@@ -66,7 +117,8 @@ main {
 body {
   margin: 0;
   height: auto;
-  background-color: #050810;
+  background-color: var(--bodyBg);
+  color: var(--textPrimary);
   flex-grow: 1;
   --cWidth: calc(100% - 30px);
   --cMaxWidth: 1920px;

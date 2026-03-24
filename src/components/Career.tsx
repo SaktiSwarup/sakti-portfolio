@@ -15,43 +15,44 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
-              </div>
-              <h3>2020</h3>
-            </div>
-            <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>Senior Software Engineer</h4>
+                <h5>ApMoSys Technologies Pvt. Ltd.</h5>
               </div>
               <h3>2021</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
+              Developed and maintained enterprise applications using Java,
+              Spring, Angular, and SQL databases. Built modules for monitoring,
+              employee operations, and test management.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
+                <h4>Full Stack Developer -: Project Owner</h4>
+                <h5>Monitoring and Automation Platforms</h5>
+              </div>
+              <h3>2023</h3>
+            </div>
+            <p>
+              Owned delivery for multiple internal products including monitoring
+              modules, scheduler workflows, escalation systems, and dashboards
+              with high focus on quality and maintainability.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Team Lead / Full Stack Java Developer</h4>
+                <h5>ApMoSys Technologies Pvt. Ltd.</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              Leading requirement analysis, technical solution design, and
+              implementation guidance for microservices-based applications.
+              Collaborating across teams for CI/CD, release planning, and
+              production-ready deployments.
             </p>
           </div>
         </div>

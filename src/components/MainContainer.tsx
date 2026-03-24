@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
+import ThemeSection from "./ThemeSection";
 import setSplitText from "./utils/splitText";
 
 const TechStack = lazy(() => import("./TechStack"));
@@ -30,7 +31,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
   }, [isDesktopView]);
 
   return (
-    <div className="container-main">
+    <div className="container-main">  
       <Cursor />
       <Navbar />
       <SocialIcons />
@@ -48,6 +49,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
                 <TechStack />
               </Suspense>
             )}
+            <ThemeSection />
             <Contact />
           </div>
         </div>

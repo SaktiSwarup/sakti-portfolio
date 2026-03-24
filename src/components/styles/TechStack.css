@@ -1,0 +1,106 @@
+/* Centered overlay + card — portaled to document.body so layout/stacking elsewhere is unchanged */
+.techstack-skill-modal-root {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: color-mix(in srgb, var(--bodyBg) 82%, transparent);
+  backdrop-filter: blur(8px);
+  animation: techstackModalFadeIn 0.2s ease-out;
+}
+
+.techstack-skill-modal {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--accentColor) 38%, transparent);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--backgroundColor) 92%, var(--accentColor)),
+    var(--backgroundColor)
+  );
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.45),
+    0 0 0 1px var(--surfaceBorder, rgba(255, 255, 255, 0.06));
+  padding: 28px 28px 22px;
+}
+
+.techstack-skill-modal h3 {
+  margin: 0 0 14px;
+  padding-right: 40px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accentColor);
+  letter-spacing: 0.02em;
+}
+
+.techstack-skill-modal p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--textBody, #e2e8f0);
+  font-weight: 300;
+}
+
+.techstack-skill-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.8);
+  color: #e2e8f0;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.techstack-skill-modal-close:hover {
+  border-color: var(--accentColor, #5eead4);
+  color: var(--accentColor, #5eead4);
+  background: rgba(94, 234, 212, 0.08);
+}
+
+.techstack-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.45);
+  pointer-events: none;
+  text-align: center;
+  max-width: 90%;
+}
+
+@keyframes techstackModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .techstack-skill-modal {
+    padding: 22px 20px 18px;
+  }
+
+  .techstack-skill-modal h3 {
+    font-size: 1.25rem;
+  }
+}

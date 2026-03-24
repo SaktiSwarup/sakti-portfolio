@@ -28,6 +28,10 @@ const setLighting = (scene: THREE.Scene) => {
     });
 
   function setPointLight(screenLight: any) {
+    if (!screenLight?.material) {
+      pointLight.intensity = 0;
+      return;
+    }
     if (screenLight.material.opacity > 0.9) {
       pointLight.intensity = screenLight.material.emissiveIntensity * 20;
     } else {
